@@ -16,3 +16,11 @@ end
 get '/more/*' do
   "Test splat operator #{params[:splat][0].split('/').join("|")}"
 end
+
+get '/form' do
+  erb :form
+end
+
+post '/form' do
+  "You've just posted '#{params[:message]}' with an awesome form!"
+end
